@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Talk About Web</title>
+  <script src="../media/js/taw.js" type="text/javascript"></script>
+  <script src="../media/js/jquery.js" type="text/javascript"></script>
+  <link rel="shortcut icon" href="../media/images/favicon.ico" />
+  <link rel="stylesheet" href="../media/css/taw_style.css" />
+  <link rel="stylesheet" href="../media/css/reset.css" />
+  <link rel="stylesheet" href="../media/css/text.css" />
+  <link rel="stylesheet" href="../media/css/960.css" />
+  <link rel="stylesheet" href="../media/css/style.css" />
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('.svc-desc').hide(); 
+        $('.svc-title').addClass('active').next().show(); 
+
+        $('.svc-title').click(function(){
+          if( $(this).next().is(':hidden') ) {  
+            $(this).toggleClass('active').next().slideDown(); 
+          } else{  
+            $(this).toggleClass('active').next().slideUp();
+          }
+          return false;
+      });
+      
+      
+      $('#editradio').hide();
+      $('#ep-yes').attr("checked", false);
+      $('#ep-no').attr("checked", false);
+      $('#st-yes').attr("checked", false);
+      $('#st-no').attr("checked", false);
+      
+      $('.rad-check').change(function(){
+        if($('#ep-yes').attr("checked")){
+          $('#editradio').show();
+        } else if($('#st-yes').attr("checked")){
+          $('#editradio').show(); 
+        } else if($('#ep-no').attr("checked")){
+          $('#editradio').hide();
+        } else if($('#st-no').attr("checked")){
+          $('#editradio').hide();
+        } else{
+          $('#editradio').hide();
+        }
+        });
+      })
+  </script>
+</head>
+
+<body>
+
+  {% block header %}
+    {% include "template/base/header.html"  %}
+  {% endblock %}
+
+  {% block content %}
+    <p> No content on this page </p>
+  {% endblock %}
+
+  {% block footer %}
+    {% include "template/base/footer.html"  %}
+  {% endblock %}
+</div>
+
+<script type="text/javascript">
+  {% block js %}
+  {% endblock %}
+</script>
+    
+</body>
+</html>

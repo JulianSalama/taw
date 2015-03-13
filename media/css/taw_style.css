@@ -1,0 +1,55 @@
+a.text {
+    text-decoration: none;
+}
+
+pre {
+    background-color: #EFEEEE;
+    border-radius: 10px;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+}
+
+pre.padded_left {
+    padding-left: 12px;
+    padding: 15px 5px;
+    border-spacing: 0px;
+    overflow: auto;
+}
+
+div.pre_text {
+    line-height: 23px;
+}
+
+div.link {
+    text-decoration: underline;
+    color: blue;
+}
+
+div.link:hover {
+    cursor:pointer;
+}
+
+form.inactive {
+    display:inline;
+}
+
+div.answer {
+    display:none;
+}
+
+div.triger {
+    display: inline-block;
+}
+
+
+div#sign_in_toggle {
+    display: inline-block;
+    cursor: pointer;
+}
+div#sign_up_toggle {
+    display: inline-block;
+    cursor: pointer;
+}

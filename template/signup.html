@@ -1,0 +1,144 @@
+<div id="cont-right">
+{% if logged_in %}
+            <div class="welcome">
+                <div class="ctwlc">Welcome {{user}},<br /><span class="pro">Here is your profile</span></div>
+                <div class="ctpro"><a href="{{base_ur}}/logout"><img src="../media/images/logout.png" /> Logout</a></div>
+            </div>
+            
+            <div class="notice">
+                <img src="../media/images/checkmarks.png" />Welcome to a technical support tutorial
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title2">
+                    <form>
+                    <ul>
+                        <li>
+                            <div class="rightradio">
+                                <input type="radio" name="enterpreneur" class="radiobtn rad-check" id="ep-yes" /><span>Yes</span>
+                                <input type="radio" name="enterpreneur" class="radiobtn rad-check" id="ep-no" /><span>No</span>
+                            </div>
+                            <div class="righttext">Are you an Enterpreneur :</div>
+                        </li>
+                        <li>
+                            <div class="rightradio">
+                                <input type="radio" name="student" class="radiobtn rad-check" id="st-yes" /><span>Yes</span>
+                                <input type="radio" name="student" class="radiobtn rad-check" id="st-no" /><span>No</span>
+                            </div>
+                            <div class="righttext">Are you a Student :</div>
+                        </li>
+                        <li class="rightedit" id="editradio">
+                            <div class="rightradio rightalign">
+                                <input type="radio" name="edit" class="radiobtn" id="edit" />Edit
+                            </div>
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+                <div class="widget-line"></div>
+                <div class="widget-body">
+                    <div class="wsub-title">Reccomendations</div>
+                    <ul>
+                        <li><a href="">Quisque dignissim congue leo</a></li>
+                        <li><a href="">Aliquam nec erat at purus cursus interdum</a></li>
+                        <li><a href="">Donec iaculis diam a nisi accumsan viverra</a></li>
+                        <li><a href="">Maecenas aliquet velit vel turpis</a></li>
+                        <li><a href="">Class aptent taciti sociosqu ad litora</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">Share a Link</div>
+                <div class="widget-line"></div>
+                <div class="widget-body">
+                    <ul>
+                        <li><a href="">Quisque dignissim congue leo</a></li>
+                        <li><a href="">Aliquam nec erat at purus cursus interdum</a></li>
+                        <li><a href="">Donec iaculis diam a nisi accumsan viverra</a></li>
+                        <li><a href="">Maecenas aliquet velit vel turpis</a></li>
+                        <li><a href="">Class aptent taciti sociosqu ad litora</a></li>
+                    </ul>
+                    <form>
+                  
+                    <input type="text" name="add_link" class="inptxt" value = "Add link here..." 
+                    onblur  = "if(this.value == '') { this.value='Add link here...'}" 
+                    onfocus = "if (this.value == 'Add link here...') {this.value=''}" />
+                    
+                    </form>
+                </div>
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">Comments / Feedback</div>
+                <div class="widget-line"></div>
+                <div class="widget-body">
+                    <form>
+                        <textarea class="inptxtarea"></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+{% else %}
+  <div class="sign">
+  <div class="cthd"><div id="sign_in_toggle">Sign In</div>  OR  <div id="sign_up_toggle">Sign Up</div></div>
+  <div class="ctln"></div>
+  <div class="ctfrm">
+    <form id="sign" method="post" action="{{base}}/">{% csrf_token %}
+      <div class="sign_up sign_in">
+	<div class="fname">Email</div>
+	<input type="text" name="email" class="ftext" />
+      </div>
+
+      <div class="sign_up">
+	<div class="fname">First Name</div>
+	<input type="text" name="fname" class="ftext" />
+      </div>
+
+      <div class="sign_up">
+	<div class="fname">Last Name</div>
+	<input type="text" name="lname" class="ftext" />
+      </div>
+
+      <div class="sign_up sign_in">
+	<div class="fname">Password</div>
+	<input type="password" name="password" class="ftext" />
+      </div>
+      <input type="submit" value="Submit" class="fbtn" />
+
+    </form>
+  </div>
+</div>
+</div>
+{% endif %}
+</div>
+
+
+<script>
+$(function() {
+  var action = $('form#sign').attr('action');
+  $('form#sign').attr('action', action + 'fsignin/');
+
+  $('div.sign_up').each(function(){
+    $(this).hide();
+  });
+
+  $('.sign_in').each(function(e){
+    $(this).show();
+  });
+
+  $('div#sign_in_toggle').click(function(e) {
+    $('form#sign').attr('action', action + 'fsignin/');
+    $('.sign_up').hide();
+    $('.sign_in').show();
+  });
+  $('div#sign_up_toggle').click(function(e) {
+    $('form#sign').attr('action', action + 'fsignup/');
+    $('.sign_in').hide();
+    $('.sign_up').show();
+  });
+
+});
+  
+</script>

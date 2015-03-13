@@ -1,0 +1,20 @@
+{% extends "template/base/talk_base.html" %}
+
+{% block content %}
+<div id="wrapper">
+  <div id="content">
+    {% include "template/menues/main.html" %}
+    <div id="cont-right">
+      <h3>Servers</h3>
+      <div class="shadtop"></div>
+      <p class="contbold">What is a server?</p>       
+      <p> 
+&nbsp&nbsp A server is a black box, which you can request remotely over the Internet to run a program and it will respond the output of this program. The most common use of servers is to respond html files or WebPages. However, a server can also serve Word file, PDF file, or any other output it is designed to answer. In order to request a file from a server, we usually need a client such as a browser. A browser’s job is to transform the URL you specified into a web request. It figures out the IP address of the server and sends the specified URL to that server. The server then understands your request based on the URL, and it responds the specific webpage or simply HTML that your browser interprets into what you see. The server can also determine whether you are logged in, or do some calculations before responding, or anything else it was designed to. 
+ &nbsp&nbsp When you experience too much web traffic, it is just that your server is trying to respond to too many requests and run out of resources, which are simply memory, or computation power. A server can crash because of that and temporarily make your website unavailable. The only way to resolve that is to scale, but that is a further discussion. A server is a physical box, and therefore the hardware can fail too. Any kind of outage can also disrupts your website. Finally, the best security for a server has to been said to be a good lock as many attacks were actual physical breaking into the server room. 
+ &nbsp&nbsp A server just like a computer runs on an operating system. As you may have heard, most companies especially like to have Linux running on their servers especially since it is an open source operating system, meaning it is free. Moreover, Linux is the number one operating system for servers because it is the most stable operating system out there today, which will minimizes the reasons why your server might crash. Microsoft also has server services. Some clients might require you to have a Microsoft server for compatibility issues with other programs.
+      </p>
+                        
+     {% include "template/base/bullshit_footer.html" %}
+{% endblock %}
+ 
+

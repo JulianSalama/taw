@@ -1,0 +1,115 @@
+/*********** Body & Tag ************/
+body                        { background: #FFF; color: #333; font-size: 14px; height: auto; }
+a.taw                           { color: #fff; text-decoration: none; }
+a.taw:hover                     { text-decoration: none; 
+                              -webkit-transition: all 200ms linear;
+    						  -moz-transition: all 200ms linear;
+    						  -o-transition: all 200ms linear;
+    						  -ms-transition: all 200ms linear;
+    						  transition: all 200ms linear; }
+a.taw:hover span                { text-decoration: none; 
+                              -webkit-transition: all 200ms linear;
+    						  -moz-transition: all 200ms linear;
+    						  -o-transition: all 200ms linear;
+    						  -ms-transition: all 200ms linear;
+    						  transition: all 200ms linear; }
+h1                          { font-family: Georgia, serif; font-weight: normal; padding-top: 20px; text-align: center; }
+h2                          { padding-top: 20px; text-align: center; }
+h3                          { color: #BF3337; padding: 0; margin-bottom: 0; }
+p                           { margin-bottom: 15px; }
+.clear                      { clear: both; }
+
+/*********** Wrapper ************/
+#wrapper                    { min-width: 940px; padding: 0; margin: 0; }
+
+/*********** Header ************/
+#header                     { min-width: 940px; height: 140px; }
+#head-top                   { min-width: 940px; height: 60px; margin: 0 auto; background-color: #FFF; }
+#head-nav                   { min-width: 940px; height: 60px; width: 940px; margin: 0 auto; }
+#head-ban                   { min-width: 940px; height: 80px; margin: 0 auto; background: url("../images/bgheader.png") center center repeat; }
+#head-gra                   { min-width: 940px; height: 80px; margin: 0 auto; background: url("../images/bgheadergra.png") 50% 50% no-repeat; }
+#head-banimg                { min-width: 940px; height: 80px; width: 940px; margin: 0 auto; background: url("../images/shadow.png") 50% 0% no-repeat; }
+
+#head-menu                  { min-width: 740px; height: 60px; width: 740px; text-align: right; float: right; }
+#head-menu ul               { float: right; color: #333; list-style-type: none; height: 60px; margin-bottom: 0; }
+#head-menu li               { width: 100px; display: block; float: left; text-align: center; text-transform: uppercase; 
+                              font-weight: bold; height: 60px; width: 100px; margin: 0; 
+                              -webkit-transition: all 300ms ease-in-out;
+                        	  -moz-transition: all 300ms ease-in-out;
+                        	  -o-transition: all 300ms ease-in-out;
+                        	  -ms-transition: all 300ms ease-in-out;
+                              transition: all 300ms ease-in-out; }  
+#head-menu li a             { color: #666; width: 100%; height: 45px; display: block; padding-top: 15px; }
+#head-menu li a:hover       { color: #FFFFFF; background-color: #BF3337; }  
+#head-menu li a:hover span  { color: #5B0808; text-shadow: 0 1px 0 #BF5F5F; }
+#head-menu li a span        { font-style: italic; text-transform: lowercase; font-weight: bold; color: #BBBBBB; position: relative; bottom: 4px; }
+#head-menu li a.active      { color: #FFFFFF; background-color: #BF3337; }
+#head-menu li a.active span { color: #5B0808; text-shadow: 0 1px 0 #BF5F5F; }
+
+#head-logo                  { height: 60px; width: 200px; float: left; position: relative; z-index: 2; }
+#head-logo img              { position: relative; top: 8px; }
+
+
+/*********** Content ************/
+#content                    { min-width: 1120px; width: 1120px; min-height: 700px; padding: 0; margin: 0 auto; }
+#content #con-left          { width: 200px; margin: 20px 0; color: #666; text-shadow: 0px 1px 0px #FFF; position: relative; float: left; }
+#content #con-left a        { color: #666666; }
+
+#cont-right         { position: relative;}
+
+#mnu                        { list-style-type: none; margin: 0; position: relative; text-transform: uppercase; }
+#mnu li                     { border-left: 1px solid #EEE; 
+                              border-right: 1px solid #EEE;
+                              border-top: 2px solid #BF3337;
+                              border-bottom: 1px solid #EEE;
+                              margin: 0 0 15px 0; 
+                              box-shadow: 0 0 2px #DDD;
+                              -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+#mnu .mnu-title             { width: 188px; height: 20px; font: bold 12px/20px Arial; color: #BF3337; padding: 0 0 0 10px; 
+                              background-color: #EEE; }
+
+#smnu                       { list-style-type: none; margin: 0; position: relative; text-transform: uppercase; padding: 0; }
+#smnu li                    { border: none; margin: 0; box-shadow: none; }
+#smnu .smnu-title           { width: 190px; height: 20px; font: bold 11px/20px Arial; padding-left: 10px; }
+#smnu .smnu-title:hover     { text-decoration: underline; } 
+
+#content #cont-middle        { width: 680px; padding: 19px 0 20px 0; color: #333; margin: 0 auto; }
+#cont-middle .shadtop        { width: 680px; height: 10px; background: url(../images/shadowcont.png) center top no-repeat; margin-bottom: 15px; }
+#cont-middle .shadbot        { width: 680px; height: 10px; background: url(../images/shadowcontbot.png) center top no-repeat; margin-bottom: 15px; }
+#cont-middle .contbold       { color: #444; font-weight: bold; }
+#cont-middle .contred        { color: #BF3337; font-weight: bold; }
+#cont-middle .contlist       { list-style-type: square; position: relative; left: -15px;  }
+.contlist a                 { font-weight: bold; color: #BF3337; }
+.contlist a:hover           { color: #444; }
+#cont-middle .comment        { width: 680px; height: 170px; background-color: #EEEEEE; }
+#cont-middle .commtit        { width: 665px; height: 30px; border-bottom: 1px solid #DDD; box-shadow: 0px 1px 0px #FFF; line-height: 30px; 
+                              text-transform: uppercase; font-weight: bold; padding-left: 15px; }
+#cont-middle .commtext       { width: 650px; height: 110px; padding: 15px; }
+#cont-middle .titl           { font: bold 12px Arial; margin: 0 auto; text-align: center; padding-bottom: 15px; color: #666; }
+.commtext img               { float: left; margin-right: 15px; }
+.commtext .texta            { width: 555px; min-width: 550px; max-width: 550px; height: 60px; min-height: 60px; max-height: 60px; 
+                              background-color: #DDD; border: none; box-shadow: 0px 1px 0px #FFF; padding: 5px; font: bold 12px/18px Arial; 
+                              color: #666; outline: none; }
+.commtext .post             { padding: 5px 15px; border: 1px solid #555; background-color: #666; color: #FFF; font: bold 11px Arial; float: right;
+                              -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; cursor: pointer; margin: 10px 2px 0 0; }
+.commtext .post:hover       { background-color: #555; border: 1px solid #444; }
+.commtext .link             { color: #666; font: bold 11px/20px Arial; float: right; margin: 14px 15px 0 0; }
+.commtext .link:hover       { color: #BF3337; }
+
+
+/*********** Footer ************/
+#footer                     { min-width: 940px; height: 50px; margin-bottom: 0; }
+#footer #foot-top           { min-width: 940px; height: 50px; background-color: #BF3337; }
+#footer #foot-top #mn       { min-width: 940px; height: 50px; width: 940px; margin: 0 auto; }
+#mn ul                      { color: #FFFFFF; list-style-type: none; position: relative; left: -15px; width: 650px; float: left; margin-bottom: 0; } 
+#mn li                      { display: inline; font: bold 11px/50px Arial; text-transform: uppercase; border-right: 1px solid #871A1E; 
+                              text-align: left; margin: 0; padding: 0 15px; text-shadow: 0px 1px 0px #111; } 
+#mn li a:hover              { color: #111111; text-shadow: 0px 1px 0px #E36064; } 
+#mn li:last-child           { border-right: none; }
+#mn .rec                    { float: right; color: #FFF; text-align: left; padding: 8px 0; }
+#mn .soc                    { position: relative; }
+#mn .soc img                { float: left; width: 35px; height: 35px; margin: 0; }
+#mn .map                    { float: left; margin-top: 3px; padding-right: 30px; }
+
+
+

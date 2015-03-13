@@ -1,0 +1,33 @@
+{% extends "template/base/talk_base.html" %}
+
+{% block content %}
+  <div id="content">
+    {% include "template/menues/main.html" %}
+    <div id="cont-middle">
+      <div class="texttitle">
+        What {% if post.singular %}is {% else %} are {% endif %} <span class="each_title"> {{post.name}}</span>?
+        <div class="check_number"><span class="each_title_green">1/2</span></div>
+      </div>
+      {{ content|safe }}
+
+    </div>
+
+    {% include "template/signup.html" with base=base_url %}
+    <div class="clear"/>   
+</div>
+
+{% endblock %}
+
+{% block js %}
+ $(function() {
+  taw.slides.init({{user_slide|safe}});
+  taw.form.init({{user_post|safe}});
+  taw.link.init();
+  taw.next.init();
+});
+{% endblock %}
+
+
+
+
+

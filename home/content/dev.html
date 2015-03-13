@@ -1,0 +1,41 @@
+{% extends "template/base/talk_base.html" %}
+
+{% block content %}
+<div id="content">
+  <div id="cont-middle">
+    <div class="texttitle">
+      Welcome to <span class="each_title"> dev </span>
+      <div class="check_number"><span class="each_title_green">1/2</span></div>
+    </div>
+    </br></br>
+    <p> Enter a course name you will like to edit in the URL </p>
+    
+{% if testing %} This is testing the html. {% else  %} This is the real thing. {% endif %} 
+
+<form action="{{base}}/dev/{{chapter}}/" method="POST"> {% csrf_token %}
+  <textarea name="test_content" style="font-size: 14px" cols="100" rows="50">{{ content_as_string }}</textarea>
+  <input type="Submit" name="test" value="Test"/>
+  <input type="Submit" name="save" value="Save"/>
+</form>
+    {{ content|safe }}
+  </div>
+
+</div>
+<div class="clear"/>   
+</div>
+
+{% endblock %}
+
+{% block js %}
+$(function() {
+taw.slides.init({{user_slide|safe}});
+taw.form.init({{user_post|safe}});
+taw.link.init();
+taw.next.init();
+});
+{% endblock %}
+
+
+
+
+

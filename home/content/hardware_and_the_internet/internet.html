@@ -1,0 +1,23 @@
+{% extends "template/base/talk_base.html" %}
+
+{% block content %}
+<div id="wrapper">
+  <div id="content">
+    {% include "template/menues/main.html" %}
+    <div id="cont-right">
+      <h3>SSDs boost Instagram's speed on Amazon EC2</h3>
+      <div class="shadtop"></div>
+      <p class="contbold">What is a internet?</p>       
+      <p> 
+	&nbsp&nbsp The middleman between your computer requesting HTML and a server is the Internet. Internet has no physical presence; it is just the connection between your computer and the rest of the computer out there. In order for you to connect to Internet, you need to have a router at home. A router is the machine that transmits your requests over the wire to usually another router that is closer to the server you are trying to request. Your request is then transmitted over and over again until there is a connection to the server. That request might be terminated if it goes through too many routers. Wires are going from your building to a main point in your city where all wires cross and are connected to others cities. Your server might then be sitting in China, and you can still access them…through wire. That point for New York City is ???
+	&nbsp&nbsp In order to allow communication between two computers, they need to expect one another, which means have a protocol they can agree on. Usually we can use sockets in order to send a packet, AKA data, directly over the wire to another computer, which needs to be listening on a specific port for that computer’s packet. Sockets are then just like web request; they are common way to request a computer. Computer can decide who to accept request from, and who to deny. In websites, the servers listening for a request from a web socket allows everyone to request its HTML. It is public. However, you may screen by IP address for instance. Or you may stop a specific IP address requesting too many times your server (robot detection). There is a similar process in order to go from router to router. 
+	&nbsp&nbsp The Internet can then allow you to access other computer, also other resources. Let’s say you had very heavy computation, or data you would to store, you can then network through your own servers to access those additional resources. Today, that is called cloud computing. Cloud services such like Dropbox lets you access more memory on some servers, cloud services such like Amazon EC2 lets you access both memory and computation via servers. 
+	
+ 
+
+      </p>
+                        
+      {% include "template/base/bullshit_footer.html" %}
+{% endblock %}
+ 
+

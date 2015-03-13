@@ -1,0 +1,13 @@
+div#add_row {
+    display:inline-block;
+}
+div#add_column {
+    display:inline-block;
+}
+div#add_row:hover {
+    cursor:pointer;
+}
+
+div#add_column:hover {
+    cursor:pointer;
+}

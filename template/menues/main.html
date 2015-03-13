@@ -1,0 +1,25 @@
+<div id="con-left">
+  {% for menue in menues %}
+  <div class="trigger">
+    <div class="svc-title active">{{menue.title}}</div>
+    <div class="svc-desc">
+      <ul id="smnu">
+	{% for sub in menue.getSubtitle %}
+        <li><a href="{{base_url}}/home/{{menue.renderLink}}/{{sub.renderLink}}"><div class="smnu-title">{{sub.name}}<div class="check_marks_num">(1/6)</div></div></a></li>  
+	{% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+<!--
+<script>
+  $(function() {
+    if("{{show_menues}}" == "") {
+      taw.menues.initMenues();
+    }
+  });
+</script>
+-->

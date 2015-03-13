@@ -1,0 +1,26 @@
+{% extends "template/base/talk_base.html" %}
+
+{% block content %}
+<div id="wrapper">
+  <div id="content">
+    {% include "template/menues/main.html" %}
+
+    <div id="cont-right">
+
+      <div class="shadtop"></div>
+
+      <p class="contbold">What {% if post.singular %}is a{% else %} are {% endif %} {{post.name}}?</p>       
+
+	{% for x in content %} 
+	{% if x.index|divisibleby:2 %}
+	  {{ x.pre|linebreaks }}
+	{% else %} 	
+	<pre class="padded_left"><code>{{x.pre}}</code></pre>
+	{% endif %}
+	{% endfor %}
+
+                        
+      {% include "template/base/bullshit_footer.html" %}
+{% endblock %}
+ 
+

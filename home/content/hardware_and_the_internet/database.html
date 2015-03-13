@@ -1,0 +1,25 @@
+{% extends "template/base/talk_base.html" %}
+
+{% block content %}
+<div id="wrapper">
+  <div id="content">
+    {% include "template/menues/main.html" %}
+    <div id="cont-right">
+      <h3>SSDs boost Instagram's speed on Amazon EC2</h3>
+      <div class="shadtop"></div>
+      <p class="contbold">What is a database?</p>       
+      <p>
+	&nbsp&nbsp A database is a server that stores data. You can then request that data using SQL languages. Usually, a database consists of tables that the programmers create. 
+Those tables contain fields, aka columns, and rows. A common use of a database, is to register a users. You then need to create a table called users, add two fields (username, password), and populate the database with your user.  
+	&nbsp&nbsp A database server can run on a different machine or on the same physical machine than a web request server. On your machine, you would have those two programs running, the database server, and the web server. Once a request come in, the web server will intercept it, and communicate it to the database server if you were to authenticate a login for instance. The database returns whether the username, and password combination matches to the web server. The web server then displays the correct webpage whether the user was authenticated. 
+ &nbsp&nbsp Those kind of database are called relational database. A common example of how to use those relational databases is shown in the example below. However, there are other way to store data than in table. Another type of database is called graph database. They rely on graph theory and store data based on how the data is being fetched.
+
+      </p>                        
+      {% include "template/base/bullshit_footer.html" %}
+{% endblock %}
+ 
+
+
+
+
+

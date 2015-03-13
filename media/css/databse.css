@@ -1,0 +1,11 @@
+div#add_row {
+    display:align block
+}
+
+div#add_row:hover {
+    cursor:pointer;
+}
+
+div#add_column:hover {
+    cursor:pointer;
+}

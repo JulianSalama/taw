@@ -1,0 +1,22 @@
+{% extends "template/base/talk_base.html" %}
+
+{% block content %}
+<div id="wrapper">
+  <div id="content">
+    {% include "template/menues/main.html" %}
+
+    <div id="cont-right">
+
+      <div class="shadtop">a</div>
+
+      <p class="contbold">What {% if post.singular %}is a{% else %} are {% endif %} {{post.name}}?</p>       
+
+      {{ template }}
+       
+
+
+                        
+      {% include "template/base/bullshit_footer.html" %}
+{% endblock %}
+ 
+
